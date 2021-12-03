@@ -1,7 +1,7 @@
-(load-file "../aoc-utils.el")
+(load-file "./aoc-utils.el")
 
 ;; Task 1 solution
-(let* ((input (aoc-utils/read-input "./input.txt" #'string-to-number))
+(let* ((input (aoc-utils/read-input "../inputs/01.txt" #'string-to-number))
        (result (cl-loop for x being elements in input
                         for y being elements in (cdr input)
                         sum (if (< x y) 1 0))))
@@ -10,7 +10,7 @@
 ;; Task 2 solution
 (let* ((x-window (make-ring 3))
        (y-window (make-ring 3))
-       (input (aoc-utils/read-input "./input.txt" #'string-to-number))
+       (input (aoc-utils/read-input "../inputs/01.txt" #'string-to-number))
        (result (cl-loop for x being elements in input
                         for y being elements in (cdr input)
                         do (progn

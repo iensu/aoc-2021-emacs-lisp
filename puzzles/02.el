@@ -1,4 +1,4 @@
-(load-file "../aoc-utils.el")
+(load-file "./aoc-utils.el")
 
 ;; Task 1
 (cl-flet ((parse-input (line)
@@ -17,7 +17,7 @@
                          (`(,x2 . ,y2) b))
               `(,(+ x1 x2) . ,(+ y1 y2)))))
 
-  (let* ((input (aoc-utils/read-input "./input.txt"
+  (let* ((input (aoc-utils/read-input "../inputs/02.txt"
                                       #'parse-input))
          (final-position (cl-loop for (direction . value) being elements in input
                                   collect (to-offset direction value) into offsets
@@ -42,7 +42,7 @@
                          (`(,x2 . ,y2) b))
               `(,(+ x1 x2) . ,(+ y1 y2)))))
 
-  (let* ((input (aoc-utils/read-input "./input.txt"
+  (let* ((input (aoc-utils/read-input "../inputs/02.txt"
                                       #'parse-input))
          (final-position (cl-loop with aim = 0
                                   for (direction . value) being elements in input
