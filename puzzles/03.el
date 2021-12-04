@@ -60,8 +60,8 @@
                                                             "0"))
                                                 bits-by-position)
                                      2))
-       (epislon (logxor gamma max-input)))
-  (message "Task 1 Result: %s" (* gamma epislon)))
+       (epsilon (logxor gamma max-input)))
+  (message "Task 1 Result: %s" (* gamma epsilon)))
 
 ;; --- Part Two ---
 ;;
